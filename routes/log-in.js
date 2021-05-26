@@ -23,7 +23,7 @@ router.post("/", async (req, res)=>{
         // buat token
         const token = createToken({id:user._id, role:user.role});
 
-        res.cookie('jwt', token, {httpOnly:true});
+        res.cookie('jwt', token, {httpOnly:true, sameSite:"none", secure:true});
         res.status(200).json({
                 status:200, 
                 user:{
