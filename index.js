@@ -13,7 +13,7 @@ const app = express();
 app.use(helmet());
 app.use(morgan('tiny'));
 app.use(cors({
-    origin:"http://localhost:8080" ,
+    origin:"https://tastes-simple-dashboard.netlify.app" ,
     credentials: true
     }));
 app.use(cookieParser());
